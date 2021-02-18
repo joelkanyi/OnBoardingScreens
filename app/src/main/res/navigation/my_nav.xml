@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewPagerAdapter"
-        android:name="com.kanyideveloper.onboardingscreens.onboarding.ViewPagerAdapter"
+        android:name="com.kanyideveloper.onboardingscreens.onboarding.ViewPagerFragment"
         android:label="fragment_view_pager_adapter"
         tools:layout="@layout/fragment_view_pager_adapter" />
 </navigation>
