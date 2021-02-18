@@ -1,5 +1,7 @@
 package com.kanyideveloper.onboardingscreens.onboarding.screens
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,8 +25,16 @@ class Screen3 : Fragment() {
 
         finish.setOnClickListener {
             findNavController().navigate(R.id.action_viewPagerAdapter_to_homeFragment)
+            onBoardingDone()
         }
 
         return view
+    }
+
+    private fun onBoardingDone(){
+        val sharedPref: SharedPreferences = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("Finished",true)
+        editor.apply()
     }
 }

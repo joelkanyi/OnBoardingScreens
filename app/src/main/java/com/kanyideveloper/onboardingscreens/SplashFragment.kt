@@ -1,5 +1,7 @@
 package com.kanyideveloper.onboardingscreens
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.Fragment
@@ -18,10 +20,20 @@ class SplashFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_splash, container, false)
 
         Handler().postDelayed({
-               findNavController().navigate(R.id.action_splashFragment_to_viewPagerAdapter)
+
+            if (onBoardingFinished()){
+                findNavController().navigate(R.id.action_splashFragment_to_homeFragment2)
+            }else{
+                findNavController().navigate(R.id.action_splashFragment_to_viewPagerAdapter)
+            }
         },3000)
 
         return view
+    }
+
+    private fun onBoardingFinished(): Boolean{
+        val sharedPref: SharedPreferences = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finished",false)
     }
 
 }

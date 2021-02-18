@@ -12,7 +12,14 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_viewPagerAdapter"
-            app:destination="@id/viewPagerAdapter" />
+            app:destination="@id/viewPagerAdapter"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment2"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/viewPagerAdapter"
@@ -21,7 +28,9 @@
         tools:layout="@layout/fragment_view_pager_adapter" >
         <action
             android:id="@+id/action_viewPagerAdapter_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/viewPagerAdapter"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
