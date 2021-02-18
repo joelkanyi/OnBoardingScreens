@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import com.kanyideveloper.onboardingscreens.R
 
 class Screen3 : Fragment() {
@@ -15,6 +17,14 @@ class Screen3 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_screen3, container, false)
+        val view = inflater.inflate(R.layout.fragment_screen3, container, false)
+
+        val finish: TextView = view.findViewById(R.id.finish)
+
+        finish.setOnClickListener {
+            findNavController().navigate(R.id.action_viewPagerAdapter_to_homeFragment)
+        }
+
+        return view
     }
 }

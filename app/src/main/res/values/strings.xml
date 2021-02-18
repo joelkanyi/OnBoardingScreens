@@ -2,5 +2,5 @@
     <string name="app_name">OnBoardingScreens</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-   <string name="template">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate at sapien id bibendum. Aliquam id nibh mollis, congue felis id, molestie neque. Suspendisse magna elit, gravida vitae dolor a, fringilla maximus ante.</string>
+    <string name="template">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate at sapien id bibendum. Aliquam id nibh mollis, congue felis id, molestie neque. Suspendisse magna elit, gravida vitae dolor a, fringilla maximus ante.</string>
 </resources>
