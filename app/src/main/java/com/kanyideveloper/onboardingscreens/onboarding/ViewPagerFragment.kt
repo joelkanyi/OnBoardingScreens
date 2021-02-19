@@ -13,11 +13,8 @@ import com.kanyideveloper.onboardingscreens.onboarding.screens.Screen3
 
 class ViewPagerFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         val view = inflater.inflate(R.layout.fragment_view_pager_adapter, container, false)
 
         val viewPager: ViewPager2 = view.findViewById(R.id.viewPager2)
@@ -29,7 +26,6 @@ class ViewPagerFragment : Fragment() {
         )
 
         val adapter = ViewPagerAdapter(fragmentList,requireActivity().supportFragmentManager,lifecycle)
-
         viewPager.adapter = adapter
 
         return view

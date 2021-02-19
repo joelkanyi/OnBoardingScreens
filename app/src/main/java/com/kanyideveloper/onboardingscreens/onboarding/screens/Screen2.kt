@@ -10,11 +10,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.kanyideveloper.onboardingscreens.R
 
 class Screen2 : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         val view = inflater.inflate(R.layout.fragment_screen2, container, false)
 
         val viewPager: ViewPager2? = activity?.findViewById(R.id.viewPager2)
@@ -23,7 +21,6 @@ class Screen2 : Fragment() {
         next2.setOnClickListener {
             viewPager?.currentItem = 2
         }
-
         return view
     }
 }

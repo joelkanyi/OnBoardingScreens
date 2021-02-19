@@ -12,11 +12,8 @@ import androidx.navigation.fragment.findNavController
 
 class SplashFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         val view = inflater.inflate(R.layout.fragment_splash, container, false)
 
         Handler().postDelayed({
@@ -35,5 +32,4 @@ class SplashFragment : Fragment() {
         val sharedPref: SharedPreferences = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
         return sharedPref.getBoolean("Finished",false)
     }
-
 }
