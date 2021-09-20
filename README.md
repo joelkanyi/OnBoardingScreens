@@ -1,6 +1,7 @@
 # OnBoardingScreens
+The onboarding process is essentially a series of screens which direct users through an app interface. They can be used to introduce users to new products or feature.
 
-A simple implementation of a Splash Screen & OnBoarding Screens using Jetpack Navigation components (One Activity and multiple fragments) and Lottie animations
+A simple implementation of a Splash Screen & OnBoarding Screens using Jetpack Navigation component and Lottie animations
 
 ## Demo
 
